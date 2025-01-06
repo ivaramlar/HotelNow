@@ -5,7 +5,6 @@ This project is a web application built with Django that provides a collaborativ
 ## Features
 
 ### Hotel Recommendations
-- **Collaborative Filtering:** Recommend hotels based on user-provided ratings and the similarity of other users' preferences.
 - **Content-Based Filtering:** Recommend hotels using features like price, surface area, number of rooms, and bathrooms.
 
 ### Car Search
