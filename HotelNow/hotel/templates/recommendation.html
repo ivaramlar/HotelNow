@@ -1,0 +1,31 @@
+<!-- templates/recommendations.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hotel Recommendations</h1>
+
+<!-- Hotel Selection Form -->
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Get Recommendations</button>
+</form>
+
+<!-- Recommendations -->
+{% if selected_hotel %}
+<h2>Recommendations for "{{ selected_hotel.titulo }}"</h2>
+<ul class="list-group">
+    {% for recommendation in recommendations %}
+    <li class="list-group-item">
+        <strong>{{ recommendation.titulo }}</strong> <br>
+        Price: ${{ recommendation.precio }} <br>
+        Surface Area: {{ recommendation.surface }} m² <br>
+        Rooms: {{ recommendation.rooms }} <br>
+        Bathrooms: {{ recommendation.bathrooms }} <br>
+        Type: {{ recommendation.tipo_encoded }}  <br>
+		Description: {{ recommendation.descripcion|default:"No description available" }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

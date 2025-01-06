@@ -1,0 +1,30 @@
+<!-- templates/recommendations.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Car Recommendations</h1>
+
+<!-- Car Selection Form -->
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Get Recommendations</button>
+</form>
+
+<!-- Recommendations -->
+{% if selected_car %}
+<h2>Recommendations for "{{ selected_car.titulo }}"</h2>
+<ul class="list-group">
+    {% for recommendation in recommendations %}
+    <li class="list-group-item">
+        <strong>{{ recommendation.titulo }}</strong> <br>
+        Brand: {{ recommendation.marca.nombre }} <br>
+        Price: ${{ recommendation.precio }} <br>
+        Year: {{ recommendation.fecha }} <br>
+        Kilometres: {{ recommendation.kilometros }} km <br>
+        Description: {{ recommendation.descripcion|default:"No description available" }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

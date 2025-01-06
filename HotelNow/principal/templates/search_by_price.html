@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Search by Price{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Search by Price</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    {{ form.filter_type.label_tag }}
+                    {{ form.filter_type }}
+                    {% if form.filter_type.errors %}
+                        <div class="text-danger">{{ form.filter_type.errors }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    {{ form.price.label_tag }}
+                    {{ form.price }}
+                    {% if form.price.errors %}
+                        <div class="text-danger">{{ form.price.errors }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+            </div>
+        </div>
+    </form>
+
+    {% if filter_type and price %}
+        <h2>Results for cars with price {{ filter_type }} {{ price }}</h2>
+        {% if cars %}
+            <ul>
+                {% for car in cars %}
+                <li>
+                    <strong>{{ car.titulo }}</strong> - ${{ car.precio }}
+                    <br>
+                    Year: {{ car.fecha }} | Km: {{ car.kilometros }}
+                    <br>
+                    Description: {{ car.descripcion }}
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No cars found for this filter.</p>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

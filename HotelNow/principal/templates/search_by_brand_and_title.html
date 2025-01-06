@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Search by Brand and Title{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Search Cars by Brand and Title</h1>
+    <form method="post" class="mb-4">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6">
+                {{ brand_form.as_p }}
+            </div>
+            <div class="col-md-6">
+                {{ title_form.as_p }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    {% if selected_brand %}
+        <h2>Results for Brand "{{ selected_brand }}" {% if title_filter %}and Title "{{ title_filter }}"{% endif %}</h2>
+        {% if cars %}
+            <ul>
+                {% for car in cars %}
+                <li>
+                    <strong>{{ car.titulo }}</strong> - {{ car.marca }}
+                    <br> Price: ${{ car.precio }} | Year: {{ car.fecha }} | Km: {{ car.kilometros }}
+                    <br> Description: {{ car.descripcion }}
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No cars found for this search criteria.</p>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

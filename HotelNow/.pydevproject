@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse-pydev version="1.0"?><pydev_project>
+        
+    <pydev_variables_property name="org.python.pydev.PROJECT_VARIABLE_SUBSTITUTION">
+        <key>env_var:ChocolateyInstall</key>
+        <value>C:\ProgramData\chocolatey</value>
+        <key>env_var:configsetroot</key>
+        <value>C:\WINDOWS\ConfigSetRoot</value>
+        <key>PY</key>
+        <value>312</value>
+        <key>env_var:PROCESSOR_REVISION</key>
+        <value>8e0c</value>
+        <key>env_var:ProgramFiles</key>
+        <value>C:\Program Files</value>
+        <key>env_var:USERDOMAIN_ROAMINGPROFILE</key>
+        <value>LAPTOP-2SKM4DD4</value>
+        <key>env_var:PROJ_LIB</key>
+        <value>C:\Program Files\PostgreSQL\17\share\contrib\postgis-3.5\proj</value>
+        <key>env_var:JAVA_HOME</key>
+        <value>C:\Program Files\Java\jdk-17</value>
+        <key>env_var:PROCESSOR_ARCHITECTURE</key>
+        <value>AMD64</value>
+        <key>env_var:CommonProgramFiles(x86)</key>
+        <value>C:\Program Files (x86)\Common Files</value>
+        <key>env_var:PATHEXT</key>
+        <value>.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW</value>
+        <key>env_var:USERDOMAIN</key>
+        <value>LAPTOP-2SKM4DD4</value>
+        <key>env_var:NUMBER_OF_PROCESSORS</key>
+        <value>8</value>
+        <key>env_var:POSTGIS_ENABLE_OUTDB_RASTERS</key>
+        <value>1</value>
+        <key>env_var:windir</key>
+        <value>C:\WINDOWS</value>
+        <key>env_var:ProgramFiles(x86)</key>
+        <value>C:\Program Files (x86)</value>
+        <key>env_var:OS</key>
+        <value>Windows_NT</value>
+        <key>env_var:ComSpec</key>
+        <value>C:\WINDOWS\system32\cmd.exe</value>
+        <key>env_var:OPENSSL_CONF</key>
+        <value>C:\Program Files\PostgreSQL\psqlODBC\etc\openssl.cnf</value>
+        <key>env_var:HOMEPATH</key>
+        <value>\Users\ivanb</value>
+        <key>env_var:ProgramData</key>
+        <value>C:\ProgramData</value>
+        <key>env_var:SystemRoot</key>
+        <value>C:\WINDOWS</value>
+        <key>env_var:PUBLIC</key>
+        <value>C:\Users\Public</value>
+        <key>env_var:CommonProgramW6432</key>
+        <value>C:\Program Files\Common Files</value>
+        <key>env_var:TMP</key>
+        <value>C:\Users\ivanb\AppData\Local\Temp</value>
+        <key>env_var:FPS_BROWSER_USER_PROFILE_STRING</key>
+        <value>Default</value>
+        <key>env_var:LOGONSERVER</key>
+        <value>\\LAPTOP-2SKM4DD4</value>
+        <key>env_var:NVM_SYMLINK</key>
+        <value>C:\Program Files\nodejs</value>
+        <key>env_var:ALLUSERSPROFILE</key>
+        <value>C:\ProgramData</value>
+        <key>env_var:GDAL_DATA</key>
+        <value>C:\Program Files\PostgreSQL\17\gdal-data</value>
+        <key>env_var:CommonProgramFiles</key>
+        <value>C:\Program Files\Common Files</value>
+        <key>env_var:COMPUTERNAME</key>
+        <value>LAPTOP-2SKM4DD4</value>
+        <key>DJANGO_MANAGE_LOCATION</key>
+        <value>manage.py</value>
+        <key>env_var:VBOX_MSI_INSTALL_PATH</key>
+        <value>C:\Program Files\Oracle\VirtualBox\</value>
+        <key>env_var:Path</key>
+        <value>C:/Users/ivanb/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626/jre/bin/server;C:/Users/ivanb/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626/jre/bin;c:\Users\ivanb\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files (x86)\Rockwell Software\RSCommon;C:\Program Files\Firefox Developer Edition;C:\Users\ivanb\DP2\Workspace-24\Tools\Infrastructure\geckodriver-0.33.0;C:\Users\ivanb\DP2\Workspace-24\Tools\Infrastructure\jdk-20.0.2\bin;C:\Users\ivanb\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\ivanb\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\ivanb\AppData\Local\Programs\Python\Python312\;C:\Users\ivanb\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\ivanb\AppData\Local\Programs\Python\Python38-32\;C:\Users\ivanb\Miniconda33;C:\Users\ivanb\Miniconda33\Library\mingw-w64\bin;C:\Users\ivanb\Miniconda33\Library\usr\bin;C:\Users\ivanb\Miniconda33\Library\bin;C:\Users\ivanb\Miniconda33\Scripts;C:\Users\ivanb\Miniconda3;C:\Users\ivanb\Miniconda3\Li;C:\Users\ivanb\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\ivanb\AppData\Local\Programs\Python\Python312\;C:\Users\ivanb\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\ivanb\AppData\Local\Programs\Python\Python38-32\;C:\Users\ivanb\Miniconda33;C:\Users\ivanb\Miniconda33\Library\mingw-w64\bin;C:\Users\ivanb\Miniconda33\Library\usr\bin;C:\Users\ivanb\Miniconda33\Library\bin;C:\Users\ivanb\Miniconda33\Scripts;C:\Users\ivanb\Miniconda3;C:\Users\ivanb\Miniconda3\Library\mingw-w64\bin;C:\Users\ivanb\Miniconda3\Library\usr\bin;C:\Users\ivanb\Miniconda3\Library\bin;C:\Users\ivanb\Miniconda3\Scripts;C:\Users\ivanb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-16.0.2\bin;C:\Users\ivanb\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ivanb\AppData\Local\GitHubDesktop\bin;C:\Users\ivanb\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\ivanb\AppData\Roaming\npm;C:\Users\ivanb\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\ivanb\AppData\Local\gitkraken\bin;C:\WINDOWS\System32;</value>
+        <key>env_var:OneDrive</key>
+        <value>C:\Users\ivanb\OneDrive</value>
+        <key>env_var:POSTGIS_GDAL_ENABLED_DRIVERS</key>
+        <value>GTiff PNG JPEG GIF XYZ DTED USGSDEM AAIGrid</value>
+        <key>env_var:SystemDrive</key>
+        <value>C:</value>
+        <key>env_var:ChocolateyLastPathUpdate</key>
+        <value>132900851174970068</value>
+        <key>env_var:CURL_CA_BUNDLE</key>
+        <value>C:\Program Files\PostgreSQL\17\ssl\certs\ca-bundle.crt</value>
+        <key>env_var:PROCESSOR_IDENTIFIER</key>
+        <value>Intel64 Family 6 Model 142 Stepping 12, GenuineIntel</value>
+        <key>env_var:TEMP</key>
+        <value>C:\Users\ivanb\AppData\Local\Temp</value>
+        <key>env_var:PSModulePath</key>
+        <value>C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules</value>
+        <key>env_var:ProgramW6432</key>
+        <value>C:\Program Files</value>
+        <key>env_var:PROCESSOR_LEVEL</key>
+        <value>6</value>
+        <key>env_var:DriverData</key>
+        <value>C:\Windows\System32\Drivers\DriverData</value>
+        <key>env_var:USERNAME</key>
+        <value>ivanb</value>
+        <key>env_var:EFC_19364</key>
+        <value>1</value>
+        <key>env_var:LOCALAPPDATA</key>
+        <value>C:\Users\ivanb\AppData\Local</value>
+        <key>env_var:APPDATA</key>
+        <value>C:\Users\ivanb\AppData\Roaming</value>
+        <key>env_var:FPS_BROWSER_APP_PROFILE_STRING</key>
+        <value>Internet Explorer</value>
+        <key>DJANGO_SETTINGS_MODULE</key>
+        <value>HotelNow.settings</value>
+        <key>env_var:=::</key>
+        <value>::\</value>
+        <key>env_var:HOMEDRIVE</key>
+        <value>C:</value>
+        <key>env_var:USERPROFILE</key>
+        <value>C:\Users\ivanb</value>
+        <key>env_var:NVM_HOME</key>
+        <value>C:\Users\ivanb\AppData\Roaming\nvm</value>
+        <key>env_var:SESSIONNAME</key>
+        <value>Console</value>
+    </pydev_variables_property>
+        
+    <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+                
+        <path>/${PROJECT_DIR_NAME}</path>
+            
+    </pydev_pathproperty>
+        
+    <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python interpreter</pydev_property>
+        
+    <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
+    
+</pydev_project>

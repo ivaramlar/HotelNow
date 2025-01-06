@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Confirm Index Creation{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <h1>Confirm Index Creation</h1>
+    <p>Are you sure you want to create the index? This will include all car or hotel data except images.</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Yes, Create Index</button>
+        <a href="/index.html" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

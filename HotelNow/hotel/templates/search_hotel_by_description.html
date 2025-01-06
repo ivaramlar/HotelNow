@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Search by Description{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Search Hotels by Description</h1>
+    <form method="post" class="mb-4">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    {% if query_text %}
+        <h2>Results for "{{ query_text }}"</h2>
+        {% if hotels %}
+            <ul class="list-group">
+                {% for hotel in hotels %}
+                <li class="list-group-item">
+                    <strong>{{ hotel.titulo }}</strong>
+                    <br> Price: ${{ hotel.precio }} 
+                    {% if hotel.precio_alquiler %}
+                        | Rental Price: ${{ hotel.precio_alquiler }}
+                    {% endif %}
+                    | Year Built: {{ hotel.anyo_construccion }} 
+                    | Surface Area: {{ hotel.surface }} m² 
+                    | Rooms: {{ hotel.rooms }} 
+                    | Bathrooms: {{ hotel.bathrooms }}
+                    <br> Type: {{ hotel.tipo }}
+                    <br> Description: {{ hotel.descripcion }}
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hotels match the description "{{ query_text }}".</p>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Search by Description{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Search Cars by Description</h1>
+    <form method="post" class="mb-4">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    {% if query_text %}
+        <h2>Results for "{{ query_text }}"</h2>
+        {% if cars %}
+            <ul>
+                {% for car in cars %}
+                <li>
+                    <strong>{{ car.titulo }}</strong> - {{ car.marca }}
+                    <br> Price: ${{ car.precio }} | Year: {{ car.fecha }} | Km: {{ car.kilometros }}
+                    <br> Description: {{ car.descripcion }}
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No cars match the description "{{ query_text }}".</p>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

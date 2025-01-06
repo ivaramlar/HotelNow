@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Categorias {% endblock %}    
+
+{% block content %}
+<h1>List of Types</h1>
+<div>
+    {% for type in types %}
+        <div>
+            <p><strong>Name:</strong> {{ type.nombre }}</p>
+        </div>
+    {% empty %}
+    <p>No hay modelos disponibles.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Lista de Hoteles {% endblock %}
+
+{% block content %}
+<h1 class="text-center">Lista de Hoteles</h1>
+<div class="hotel-grid">
+    {% for hotel in page_obj %}
+        <div class="hotel-card">
+            <div class="hotel-details">
+                <h3>{{ hotel.titulo }}</h3>
+                <p><strong>Type:</strong> {{ hotel.tipo.nombre }}</p>
+                <p><strong>Price:</strong> ${{ hotel.precio }}</p>
+                <p><strong>Year Built:</strong> {{ hotel.anyo_construccion }}</p>
+                <p><strong>Surface Area:</strong> {{ hotel.surface }} m²</p>
+                <p><strong>Rooms:</strong> {{ hotel.rooms }}</p>
+                <p><strong>Bathrooms:</strong> {{ hotel.bathrooms }}</p>
+                {% if hotel.descripcion %}
+                    <p><strong>Description:</strong> {{ hotel.descripcion }}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+    <p class="text-center">No hay hoteles disponibles.</p>
+    {% endfor %}
+</div>
+
+<!-- Pagination Controls -->
+<div class="pagination mt-4">
+    <nav>
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <li class="page-item active" aria-current="page">
+                        <span class="page-link">{{ num }}</span>
+                    </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endblock %}

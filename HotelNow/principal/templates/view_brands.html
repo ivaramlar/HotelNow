@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Categorias {% endblock %}    
+
+{% block content %}
+<h1>Lista de Modelos</h1>
+<div>
+    {% for marca in marcas %}
+        <div>
+            <p><strong>Name:</strong> {{ marca.nombre }}</p>
+        </div>
+    {% empty %}
+    <p>No hay modelos disponibles.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}HotelNow{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/car.css' %}">
+	<!-- Link Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	    <div class="container-fluid">
+	        <a class="navbar-brand" href="/">HotelNow</a>
+	        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	            <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarNav">
+	            <ul class="navbar-nav">
+	                <!-- Populate Dropdown -->
+	                <li class="nav-item dropdown">
+	                    <a class="nav-link dropdown-toggle" href="#" id="populateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	                        Populate
+	                    </a>
+	                    <ul class="dropdown-menu" aria-labelledby="populateDropdown">
+	                        <li>
+	                            <a class="dropdown-item" href="/populate/">Populate Car's Database</a>
+	                        </li>
+							<li>
+								 <a class="dropdown-item" href="/hotel/populate/">Populate Hotel's Database</a>
+							</li>
+	                    </ul>
+	                </li>
+
+	                <!-- Whoosh Index Dropdown -->
+	                <li class="nav-item dropdown">
+	                    <a class="nav-link dropdown-toggle" href="#" id="whooshDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	                        Whoosh Index
+	                    </a>
+	                    <ul class="dropdown-menu" aria-labelledby="whooshDropdown">
+	                        <li>
+	                            <a class="dropdown-item" href="/create_whoos_index/">Create Whoosh Index for Car</a>
+	                        </li>
+							<li>
+							    <a class="dropdown-item" href="/hotel/create_whoos_index/">Create Whoosh Index for Hotel</a>
+							</li>
+	                    </ul>
+	                </li>
+
+	                <!-- View Brands and Cars -->
+	                <li class="nav-item">
+	                    <a class="nav-link" href="/hotel/view_hotels">View Hotels</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="/cars/">View Cars</a>
+	                </li>
+
+	                <!-- Search Dropdown -->
+	                <li class="nav-item dropdown">
+	                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	                        Search Car
+	                    </a>
+	                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+	                        <li>
+	                            <a class="dropdown-item" href="/search_car_by_brand_and_title/">Search by brand and title</a>
+	                        </li>
+	                        <li>
+	                            <a class="dropdown-item" href="/search_by_price/">Search by price</a>
+	                        </li>
+							<li>
+								<a class="dropdown-item" href="/search_by_description/">Search by description</a>
+							</li>
+	                    </ul>
+	                </li>
+					<!-- Search Dropdown -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					             Search Hotel
+					    </a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="/hotel/search_hotel_by_description/">Search by description</a>
+							</li>
+					     </ul>
+					</li>
+					<!-- Search Dropdown -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Recommendations
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								 <a class="dropdown-item" href="/hotel/recommendation">Recommend me a hotel</a>
+						                        
+							</li>
+							<li>
+								 <a class="dropdown-item" href="/recommendation">Recommend me a Car</a>
+													                        
+							</li>
+						                        
+						</ul>
+					</li>
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
+
+	<div class="container">
+	    {% block content %}{% endblock %}
+	</div>
+</body>
+</html>
